@@ -2,6 +2,55 @@
 This GitHub repository contains Jupyter Notebooks detailing our methods for analyzing sustainable dining practices in Tokyo.
 
 #Contents
+
+# System Requirements
+## Hardware requirements
+The package requires only a standard computer with enough RAM to support the in-memory operations.
+
+## Software requirements
+### OS Requirements
+This repository is platform-independent and runs on Windows, macOS, and Linux. The primary dependencies are Python 3.11, Jupyter Notebook.
+
+### Python Dependencies
+Required libraries include numpy, pandas, matplotlib, seaborn, textwrap, pyomo, math, folium etc. (listed in notebook files)
+
+
+# Installation Guide  
+
+#### Install from GitHub  
+```bash
+git clone https://github.com/LiqiaoHuang/Sus-Din-Out.git
+cd Sus-Din-Out
+pip install -r requirements.txt
+```
+- If needed, use `sudo pip install -r requirements.txt`.  
+- For virtual environments:  
+  ```bash
+  python -m venv env
+  source env/bin/activate  # macOS/Linux
+  env\Scripts\activate  # Windows
+  ```
+
+#### Run Jupyter Notebooks  
+```bash
+jupyter notebook
+```
+Open the provided link in your browser.
+
+---
+
+### Docker Setup (Optional)  
+
+#### Build and Run Locally  
+```bash
+docker build -t sus-din-out:latest .
+docker run -it --rm --name sus-din-out-env sus-din-out:latest
+```
+
+This setup ensures smooth installation and reproducibility. 
+
+# Documenation
+
 1. Notebooks
 Main Analytical Notebooks
 SDOI_calculation.ipynb: Calculates the Sustainable Dining Out Index (SDOI) across railway stations, lines, and administrative districts in Tokyo.
