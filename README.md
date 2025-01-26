@@ -14,6 +14,10 @@ This repository is platform-independent and runs on Windows, macOS, and Linux. T
 ### Python Dependencies
 Required libraries include numpy, pandas, matplotlib, seaborn, textwrap, pyomo, math, folium etc. (listed in notebook files)
 
+The system that our software has been tested on is macOS Sequoia 15.1.1 (also compatible with Windows and Linux)
+Python Version: 3.11
+Jupyter Notebook Version: 6.5.2
+
 
 # Installation Guide  
 
@@ -37,17 +41,7 @@ jupyter notebook
 ```
 Open the provided link in your browser.
 
----
-
-### Docker Setup (Optional)  
-
-#### Build and Run Locally  
-```bash
-docker build -t sus-din-out:latest .
-docker run -it --rm --name sus-din-out-env sus-din-out:latest
-```
-
-This setup ensures smooth installation and reproducibility. 
+This setup ensures smooth installation and reproducibility, and the install can be achieved in about 30 seconds on a machine with the recommended specs.
 
 # Documenation
 
@@ -66,6 +60,8 @@ Optimization and Visualization
 Results_analysis.ipynb:Visualizes disparities in restaurant distribution and sustainability across Tokyo's urban areas, providing spatial context to the analysis.
 
 Visulization_of_optimization.ipynb: Newly added, this notebook visualizes the results of our optimization models. It highlights key recommendations for improving sustainable dining access across underperforming areas.
+
+The expected run time depends on the size of the dataset. When applied 112 thousands of restaurants data in Tokyo as case study, the total time is around 35 minutes. With the demo data we provided, the analyzing time should be kept within 10 minutes depending on the hardwares. 
 
 2. Study Context
 This repository supports our research on the interplay between urbanization, culinary identity, and sustainability in dining choices. It provides an analytical framework for assessing disparities in sustainable dining options and identifying strategies for improvement. The methods are grounded in data-driven analyses, incorporating dimensions like pricing, nutrition, and environmental impact, as well as leveraging optimization modeling to propose actionable solutions.
